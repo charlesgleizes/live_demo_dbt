@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw
+    description: this is raw circle data direclty from original csv - no modification
+    schema : gz_ra_data
+    tables:
+      - name : sales
+        description : sales table from greenwheez -> chaque ligne correspond à une vente (order id)
+        identifier: raw_gz_sales
+      - name : ship
+        description : ship table from gz -> chaque ligne correspond à la donnée de livraison relative à une vente donnée (order id)
+        identifier: raw_gz_ship
+      - name : product
+        description : product table -> chaque ligne correspond à un produit différent
+        identifier: raw_gz_product
